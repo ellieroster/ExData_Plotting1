@@ -5,7 +5,7 @@ plot2 <- function() {
     e1$dateformat <- as.Date(e1$Date,"%d/%m/%Y")
        e1$timestamp <- as.POSIXlt(paste(e1$dateformat,e1$Time))
   
-    plot(e1$timestamp,e1$Global_active_power)
+    plot(e1$timestamp,e1$Global_active_power,type="l")
 dev.off()
 }
 
