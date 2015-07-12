@@ -5,7 +5,10 @@ plot3 <- function() {
     e1$dateformat <- as.Date(e1$Date,"%d/%m/%Y")
        e1$timestamp <- as.POSIXlt(paste(e1$dateformat,e1$Time))
   
-    plot(e1$timestamp,e1$Global_active_power,type="n")
+    plot(e1$timestamp,e1$Sub_metering_1,type="n")
+    lines(e1$timestamp,e1$Sub_metering_1,col="grey")
+    lines(e1$timestamp,e1$Sub_metering_2,col="orange")
+    lines(e1$timestamp,e1$Sub_metering_3,col="blue")
 dev.off()
 }
 
